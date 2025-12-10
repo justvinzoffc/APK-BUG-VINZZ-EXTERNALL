@@ -5,6 +5,12 @@
       "password": "x",
       "role": "owner",
       "expired": "never"
+    },
+    {
+      "username": "PAUL",
+      "password": "STORE7CDX",
+      "role": "user",
+      "expired": "2026-01-10"
     }
   ]
 }
