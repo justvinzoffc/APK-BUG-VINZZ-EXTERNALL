@@ -3,14 +3,8 @@
     {
       "username": "x",
       "password": "x",
-      "role": "Owner",
-      "expired": "22-12-9999"
-    },
-    {
-      "username": "vinzz",
-      "password": "vinzz",
-      "role": "user",
-      "expired": "22-12-9999"
+      "role": "owner",
+      "expired": "never"
     }
   ]
 }
