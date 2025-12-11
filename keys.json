@@ -23,6 +23,12 @@
       "password": "300811",
       "role": "user",
       "expired": "2026-01-11"
+    },
+    {
+      "username": "irsyad",
+      "password": "irsyadstr",
+      "role": "user",
+      "expired": "2026-03-17"
     }
   ]
 }
