@@ -17,6 +17,12 @@
       "password": "ganteng133",
       "role": "user",
       "expired": "2025-12-12"
+    },
+    {
+      "username": "Rilz",
+      "password": "300811",
+      "role": "user",
+      "expired": "2026-01-11"
     }
   ]
 }
