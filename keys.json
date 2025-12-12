@@ -18,6 +18,12 @@
       "password": "300811",
       "role": "user",
       "expired": "2026-01-11"
+    },
+    {
+      "username": "daffa",
+      "password": "AC67D",
+      "role": "user",
+      "expired": "2025-12-19"
     }
   ]
 }
