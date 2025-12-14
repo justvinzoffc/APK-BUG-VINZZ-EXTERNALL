@@ -30,6 +30,12 @@
       "password": "louzy7DfhG",
       "role": "user",
       "expired": "2025-12-15"
+    },
+    {
+      "username": "free",
+      "password": "free",
+      "role": "user",
+      "expired": "2026-12-12"
     }
   ]
 }
