@@ -42,6 +42,12 @@
       "password": "Ac1xD9",
       "role": "user",
       "expired": "2025-12-30"
+    },
+    {
+      "username": "kim",
+      "password": "kimsigma",
+      "role": "user",
+      "expired": "2025-12-20"
     }
   ]
 }
