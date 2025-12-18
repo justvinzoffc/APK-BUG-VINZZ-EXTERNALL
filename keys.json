@@ -42,6 +42,12 @@
       "password": "kimsigma",
       "role": "user",
       "expired": "2025-12-20"
+    },
+    {
+      "username": "putra",
+      "password": "putra987",
+      "role": "user",
+      "expired": "Never"
     }
   ]
 }
