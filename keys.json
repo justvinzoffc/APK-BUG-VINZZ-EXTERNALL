@@ -30,6 +30,12 @@
       "password": "putra987",
       "role": "user",
       "expired": "Never"
+    },
+    {
+      "username": "daffslowres",
+      "password": "aWokawok",
+      "role": "user",
+      "expired": "2025-12-25"
     }
   ]
 }
