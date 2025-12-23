@@ -36,6 +36,12 @@
       "password": "aWokawok",
       "role": "user",
       "expired": "2025-12-25"
+    },
+    {
+      "username": "Varo",
+      "password": "321",
+      "role": "user",
+      "expired": "2025-12-26"
     }
   ]
 }
