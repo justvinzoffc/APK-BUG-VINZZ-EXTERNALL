@@ -42,6 +42,12 @@
       "password": "321",
       "role": "user",
       "expired": "2025-12-26"
+    },
+    {
+      "username": "p",
+      "password": "kim",
+      "role": "user",
+      "expired": "Never"
     }
   ]
 }
