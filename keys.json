@@ -36,6 +36,12 @@
       "password": "321",
       "role": "user",
       "expired": "2025-12-26"
+    },
+    {
+      "username": "gann",
+      "password": "ganteng002",
+      "role": "owner",
+      "expired": "2026-01-24"
     }
   ]
 }
