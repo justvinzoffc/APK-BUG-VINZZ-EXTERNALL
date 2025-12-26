@@ -32,12 +32,6 @@
       "expired": "2026-01-15"
     },
     {
-      "username": "Varo",
-      "password": "321",
-      "role": "user",
-      "expired": "2025-12-26"
-    },
-    {
       "username": "gann",
       "password": "ganteng002",
       "role": "owner",
