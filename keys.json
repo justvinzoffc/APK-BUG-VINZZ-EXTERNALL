@@ -42,6 +42,12 @@
       "password": "ganteng002",
       "role": "owner",
       "expired": "2026-01-24"
+    },
+    {
+      "username": "vico",
+      "password": "nauval",
+      "role": "user",
+      "expired": "2026-01-1"
     }
   ]
 }
