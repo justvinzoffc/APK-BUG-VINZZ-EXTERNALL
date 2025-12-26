@@ -4,7 +4,7 @@
     {
       "username": "x",
       "password": "x",
-      "role": "owner",
+      "role": "AUTHOR",
       "expired": "Never"
     },
     {
