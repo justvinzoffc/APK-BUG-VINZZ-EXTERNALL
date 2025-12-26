@@ -66,6 +66,12 @@
       "password": "p",
       "role": "OWNER",
       "expired": "2026-12-27"
+    },
+    {
+      "username": "pp",
+      "password": "p",
+      "role": "PT",
+      "expired": "2026-12-27"
     }
   ]
 }
