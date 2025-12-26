@@ -54,12 +54,6 @@
       "password": "Gotz123",
       "role": "USER",
       "expired": "2025-12-29"
-    },
-    {
-      "username": "Always",
-      "password": "1779",
-      "role": "USER",
-      "expired": "2025-12-27"
     }
   ]
 }
