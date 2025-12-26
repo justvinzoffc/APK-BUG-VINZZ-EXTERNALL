@@ -48,6 +48,12 @@
       "password": "xxxciloo",
       "role": "user",
       "expired": "2025-12-29"
+    },
+    {
+      "username": "Gotz",
+      "password": "Gotz123",
+      "role": "user",
+      "expired": "2025-12-29"
     }
   ]
 }
