@@ -10,55 +10,55 @@
     {
       "username": "PAUL",
       "password": "STORE7CDXV",
-      "role": "user",
+      "role": "USER",
       "expired": "2026-01-10"
     },
     {
       "username": "Rilz",
       "password": "300811",
-      "role": "user",
+      "role": "USER",
       "expired": "2026-01-11"
     },
     {
       "username": "renn",
       "password": "Ac1xD9",
-      "role": "user",
+      "role": "USER",
       "expired": "2025-12-30"
     },
     {
       "username": "putra",
       "password": "putra987",
-      "role": "user",
+      "role": "USER",
       "expired": "2026-01-15"
     },
     {
       "username": "gann",
       "password": "ganteng002",
-      "role": "owner",
+      "role": "OWNER",
       "expired": "2026-01-24"
     },
     {
       "username": "vico",
       "password": "nauval",
-      "role": "user",
+      "role": "USER",
       "expired": "2026-01-1"
     },
     {
       "username": "ciloo",
       "password": "xxxciloo",
-      "role": "user",
+      "role": "USER",
       "expired": "2025-12-29"
     },
     {
       "username": "Gotz",
       "password": "Gotz123",
-      "role": "user",
+      "role": "USER",
       "expired": "2025-12-29"
     },
     {
       "username": "Always",
       "password": "1779",
-      "role": "user",
+      "role": "USER",
       "expired": "2025-12-27"
     }
   ]
