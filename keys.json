@@ -66,6 +66,12 @@
       "password": "DENZZET1324",
       "role": "USER",
       "expired": "2026-01-2"
+    },
+    {
+      "username": "tanz",
+      "password": "00",
+      "role": "USER",
+      "expired": "2025-12-30"
     }
   ]
 }
