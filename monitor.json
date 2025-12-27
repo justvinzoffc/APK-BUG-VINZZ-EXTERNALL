@@ -1,28 +1,106 @@
-{
-  "config": {
-    "auto_delete_expired": true,
-    "auto_delete_invalid_date": true,
-    "notify_telegram_on_change": true,
-    "check_interval_seconds": 10
-  },
-
-  "telegram": {
-    "bot_token": "8572486485:AAH8Io1iaGoEVDREZ2W_PHu9fKHd-yZzZ0w",
-    "owner_chat_id": "6696150439"
-  },
-
-  "stats": {
-    "last_cleanup": "Never",
-    "total_deleted": 0,
-    "last_deleted_user": "-",
-    "last_action": "-"
-  },
-
-  "logs": [
-    {
-      "event": "SYSTEM_READY",
-      "time": "FIRST_BOOT",
-      "details": "monitor.json aktif & menunggu perubahan data"
-    }
-  ]
+<script>
+// =================== LOAD & SAVE JSON ===================
+async function loadJSON(file){
+    const res = await fetch(file);
+    return await res.json();
 }
+
+async function saveJSON(file, data){
+    await fetch(file, {
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body: JSON.stringify(data, null, 2)
+    });
+}
+
+// =================== VALIDASI TANGGAL ===================
+function validDate(date){
+    return /^\d{4}-\d{2}-\d{2}$/.test(date);
+}
+
+// =================== NOTIF TELEGRAM ===================
+async function notifyTelegram(text){
+    let monitor = await loadJSON("monitor.json");
+    const botToken = monitor.telegram.bot_token;
+    const ownerId = monitor.telegram.owner_chat_id;
+
+    if(!botToken || !ownerId) return;
+
+    fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${ownerId}&text=${encodeURIComponent(text)}`);
+}
+
+// =================== LOG & MONITOR ===================
+async function logMonitor(event, userObj){
+    let monitor = await loadJSON("monitor.json");
+    const now = new Date().toISOString();
+    const userInfo = `${userObj.username} | ${userObj.password} | ${userObj.role} | ${userObj.expired}`;
+
+    monitor.logs.push({
+        event: event,
+        time: now,
+        details: userInfo
+    });
+
+    monitor.stats.last_action = event;
+    if(event === "DELETE" || event === "ADD" || event === "EXPIRED_DELETE"){
+        monitor.stats.last_deleted_user = userObj.username;
+        await notifyTelegram(`⚡ Event: ${event}\nUser Info: ${userInfo}\nTime: ${now}`);
+    }
+
+    await saveJSON("monitor.json", monitor);
+}
+
+// =================== AUTO CLEAN EXPIRED ===================
+async function autoCleanKeys(){
+    let db = await loadJSON("keys.json");
+    let removedUsers = [];
+    const today = new Date();
+
+    db.users = db.users.filter(u => {
+        if(u.role === "OWNER" || u.role === "AUTHOR" || u.expired === "Never") return true;
+
+        if(!validDate(u.expired)){
+            removedUsers.push({...u, reason: "invalid_date"});
+            return false;
+        }
+
+        if(new Date(u.expired) < today){
+            removedUsers.push({...u, reason: "expired"});
+            return false;
+        }
+
+        return true;
+    });
+
+    if(removedUsers.length > 0){
+        await saveJSON("keys.json", db);
+
+        for(let user of removedUsers){
+            await logMonitor("EXPIRED_DELETE", user);
+        }
+    }
+}
+
+// =================== TAMBAH USER ===================
+async function addUser(userObj){
+    let db = await loadJSON("keys.json");
+    db.users.push(userObj);
+    await saveJSON("keys.json", db);
+    await logMonitor("ADD", userObj);
+}
+
+// =================== DELETE USER MANUAL ===================
+async function deleteUser(username){
+    let db = await loadJSON("keys.json");
+    const index = db.users.findIndex(u => u.username === username);
+    if(index === -1) return;
+
+    const removed = db.users[index];
+    db.users.splice(index,1);
+    await saveJSON("keys.json", db);
+    await logMonitor("DELETE", removed);
+}
+
+// =================== AUTO RUN ===================
+setInterval(autoCleanKeys, 10000); // cek setiap 10 detik
+</script>
