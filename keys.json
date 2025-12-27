@@ -60,12 +60,6 @@
       "password": "xxrsa",
       "role": "USER",
       "expired": "2025-12-30"
-    },
-    {
-      "username": "tes",
-      "password": "t",
-      "role": "USER",
-      "expired": "2025-12-27"
     }
   ]
 }
