@@ -1,0 +1,28 @@
+{
+  "config": {
+    "auto_delete_expired": true,
+    "auto_delete_invalid_date": true,
+    "notify_telegram_on_change": true,
+    "check_interval_seconds": 10
+  },
+
+  "telegram": {
+    "bot_token": "ISI_BOT_TOKEN_KAMU",
+    "owner_chat_id": "ISI_CHAT_ID_OWNER"
+  },
+
+  "stats": {
+    "last_cleanup": "Never",
+    "total_deleted": 0,
+    "last_deleted_user": "-",
+    "last_action": "-"
+  },
+
+  "logs": [
+    {
+      "event": "SYSTEM_READY",
+      "time": "FIRST_BOOT",
+      "details": "monitor.json aktif & menunggu perubahan data"
+    }
+  ]
+}
