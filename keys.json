@@ -1,77 +1,65 @@
-<script>
-// ====================== DATABASE ======================
-let data = {
+{
   "maintenance": false,
   "users": [
-    {"username":"x","password":"x","role":"AUTHOR","expired":"Never"},
-    {"username":"PAUL","password":"STORE7CDXV","role":"USER","expired":"2026-01-10"},
-    {"username":"Rilz","password":"300811","role":"USER","expired":"2026-01-11"},
-    {"username":"renn","password":"Ac1xD9","role":"USER","expired":"2025-12-30"},
-    {"username":"putra","password":"putra987","role":"USER","expired":"2026-01-15"},
-    {"username":"gann","password":"ganteng002","role":"OWNER","expired":"2026-01-24"},
-    {"username":"vico","password":"nauval","role":"USER","expired":"2026-01-01"},
-    {"username":"ciloo","password":"xxxciloo","role":"USER","expired":"2025-12-29"},
-    {"username":"Gotz","password":"Gotz123","role":"USER","expired":"2025-12-29"},
-    {"username":"cacuii","password":"xxrsa","role":"USER","expired":"2025-12-30"}
-  ]
-};
-
-// ====================== TELEGRAM CONFIG ======================
-const BOT_TOKEN = "8572486485:AAH8Io1iaGoEVDREZ2W_PHu9fKHd-yZzZ0w";
-const OWNER_CHAT_ID = "6696150439";
-
-// Kirim notifikasi ke Owner Telegram
-function notifyOwner(text){
-    const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${OWNER_CHAT_ID}&text=${encodeURIComponent(text)}`;
-    fetch(url).catch(e=>console.log("Notif gagal:",e));
-}
-
-// ====================== AUTO CLEAN DATABASE ======================
-function autoCleanDatabase(){
-    const today = new Date();
-    let deletedUsers = [];
-
-    data.users = data.users.filter(user=>{
-        // ===========================================
-        // 1. Permanent role tidak dihapus
-        // ===========================================
-        if(user.expired==="Never" || user.role==="OWNER" || user.role==="AUTHOR"){
-            return true;
-        }
-
-        // ===========================================
-        // 2. Validasi Format Tanggal (YYYY-MM-DD)
-        // ===========================================
-        if(!/^\d{4}-\d{2}-\d{2}$/.test(user.expired)){
-            deletedUsers.push(user.username + " (format salah)");
-            return false;
-        }
-
-        const exp = new Date(user.expired);
-
-        // Jika invalid date → auto delete
-        if(isNaN(exp.getTime())){
-            deletedUsers.push(user.username + " (invalid date)");
-            return false;
-        }
-
-        // ===========================================
-        // 3. User Expired → Hapus
-        // ===========================================
-        if(exp < today){
-            deletedUsers.push(user.username+" (expired)");
-            return false;
-        }
-
-        return true;
-    });
-
-    // Jika ada perubahan database → kirim telegram owner
-    if(deletedUsers.length > 0){
-        notifyOwner("⚠ DATABASE UPDATE\nUser terhapus otomatis:\n- " + deletedUsers.join("\n- "));
+    {
+      "username": "x",
+      "password": "x",
+      "role": "AUTHOR",
+      "expired": "Never"
+    },
+    {
+      "username": "PAUL",
+      "password": "STORE7CDXV",
+      "role": "USER",
+      "expired": "2026-01-10"
+    },
+    {
+      "username": "Rilz",
+      "password": "300811",
+      "role": "USER",
+      "expired": "2026-01-11"
+    },
+    {
+      "username": "renn",
+      "password": "Ac1xD9",
+      "role": "USER",
+      "expired": "2025-12-30"
+    },
+    {
+      "username": "putra",
+      "password": "putra987",
+      "role": "USER",
+      "expired": "2026-01-15"
+    },
+    {
+      "username": "gann",
+      "password": "ganteng002",
+      "role": "OWNER",
+      "expired": "2026-01-24"
+    },
+    {
+      "username": "vico",
+      "password": "nauval",
+      "role": "USER",
+      "expired": "2026-01-1"
+    },
+    {
+      "username": "ciloo",
+      "password": "xxxciloo",
+      "role": "USER",
+      "expired": "2025-12-29"
+    },
+    {
+      "username": "Gotz",
+      "password": "Gotz123",
+      "role": "USER",
+      "expired": "2025-12-29"
+    },
+    {
+      "username": "cacuii",
+      "password": "xxrsa",
+      "role": "USER",
+      "expired": "2025-12-30"
     }
+  ]
 }
-
-// Jalankan otomatis saat halaman dibuka
-autoCleanDatabase();
-</script>
