@@ -72,6 +72,12 @@
       "password": "00",
       "role": "USER",
       "expired": "2025-12-30"
+    },
+    {
+      "username": "Alwaysss",
+      "password": "ex",
+      "role": "USER",
+      "expired": "2026-01-5"
     }
   ]
 }
