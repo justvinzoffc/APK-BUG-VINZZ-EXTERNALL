@@ -78,6 +78,12 @@
       "password": "ex",
       "role": "USER",
       "expired": "2026-01-5"
+    },
+    {
+      "username": "Whitenots32",
+      "password": "tytydterbang",
+      "role": "USER",
+      "expired": "2026-01-4"
     }
   ]
 }
