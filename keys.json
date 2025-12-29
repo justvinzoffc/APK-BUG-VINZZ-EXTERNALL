@@ -78,6 +78,12 @@
       "password": "daff",
       "role": "USER",
       "expired": "2026-01-1"
+    },
+    {
+      "username": "Gebra",
+      "password": "FreeSender",
+      "role": "USER",
+      "expired": "Never"
     }
   ]
 }
