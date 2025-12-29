@@ -72,6 +72,12 @@
       "password": "tytydterbang",
       "role": "USER",
       "expired": "2026-01-4"
+    },
+    {
+      "username": "daff1",
+      "password": "daff",
+      "role": "USER",
+      "expired": "2026-01-1"
     }
   ]
 }
