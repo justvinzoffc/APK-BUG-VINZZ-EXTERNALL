@@ -44,12 +44,6 @@
       "expired": "2026-01-1"
     },
     {
-      "username": "ciloo",
-      "password": "xxxciloo",
-      "role": "USER",
-      "expired": "2025-12-29"
-    },
-    {
       "username": "cacuii",
       "password": "xxrsa",
       "role": "USER",
