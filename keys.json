@@ -72,6 +72,12 @@
       "password": "071088",
       "role": "USER",
       "expired": "2026-01-1"
+    },
+    {
+      "username": "egi",
+      "password": "egi123",
+      "role": "USER",
+      "expired": "2026-01-1"
     }
   ]
 }
