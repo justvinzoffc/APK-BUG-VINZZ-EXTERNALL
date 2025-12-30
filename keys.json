@@ -84,6 +84,12 @@
       "password": "FreeSender",
       "role": "USER",
       "expired": "Never"
+    },
+    {
+      "username": "Angga",
+      "password": "Rindiani09",
+      "role": "USER",
+      "expired": "2026-01-2"
     }
   ]
 }
