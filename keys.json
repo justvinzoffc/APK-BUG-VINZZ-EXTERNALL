@@ -78,6 +78,12 @@
       "password": "egi123",
       "role": "USER",
       "expired": "2026-01-1"
+    },
+    {
+      "username": "relxz4you",
+      "password": "rellsukacenmulin",
+      "role": "USER",
+      "expired": "2026-01-2"
     }
   ]
 }
