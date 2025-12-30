@@ -66,6 +66,12 @@
       "password": "Rindiani09",
       "role": "USER",
       "expired": "2026-01-2"
+    },
+    {
+      "username": "Abrahm",
+      "password": "071088",
+      "role": "USER",
+      "expired": "2026-01-1"
     }
   ]
 }
