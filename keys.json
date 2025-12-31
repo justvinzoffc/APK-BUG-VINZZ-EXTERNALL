@@ -84,6 +84,12 @@
       "password": "rellsukacenmulin",
       "role": "USER",
       "expired": "2026-01-2"
+    },
+    {
+      "username": "GONOLHACKER",
+      "password": "GonolRjnshlat",
+      "role": "USER",
+      "expired": "2026-01-3"
     }
   ]
 }
