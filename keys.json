@@ -66,6 +66,12 @@
       "password": "GonolRjnshlat",
       "role": "USER",
       "expired": "2026-01-3"
+    },
+    {
+      "username": "haha",
+      "password": "haga",
+      "role": "USER",
+      "expired": "2026-12-01"
     }
   ]
 }
